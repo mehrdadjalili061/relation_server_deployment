@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: relation-api-service
+spec:
+  selector:
+    app: relation-api-server
+  ports:
+    - name: http-api
+      protocol: TCP
+      port: 31508
+      targetPort: 8080
+      nodePort: 31508
+    - name: grpc-client-port
+      protocol: TCP
+      port: 30018
+      targetPort: 30018
+      nodePort: 30018 
+  type: NodePort

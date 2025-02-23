@@ -18,7 +18,7 @@ spec:
         - name: facegram-registery
       containers:
         - name: relation-api-server
-          image: ""
+          image: cr.fcgm.dev/facegram/relation_service:25865715
           ports:
             - containerPort: 8080
             - containerPort: 30018
